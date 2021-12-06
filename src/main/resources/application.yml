@@ -1,0 +1,42 @@
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  data:
+    solr:
+      host: http://192.168.3.217:8983/solr/dmdz
+  mvc:
+    static-path-pattern: /img/**
+  resources:
+    static-locations: file:D://upload/
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    master:
+      url: jdbc:oracle:thin:@2.82.23.51:1521:DMDZMAPORCL
+      username: sde
+      password: sde
+      driver-class-name: oracle.jdbc.OracleDriver
+      type: com.zaxxer.hikari.HikariDataSource
+    cluster:
+      - key: slave1
+        url: jdbc:oracle:thin:@192.168.3.217:1521:ORCL
+        username: DMDZ
+        password: DMdz888888
+        driver-class-name: oracle.jdbc.OracleDriver
+        type: com.zaxxer.hikari.HikariDataSource
+    aop:
+      auto: true
+      proxy-target-class: true
+
+server:
+  port: 9299
+
+file:
+  uploadPath: E:\\dmdz_app\file\

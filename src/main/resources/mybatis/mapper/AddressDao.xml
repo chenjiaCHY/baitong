@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ntschy.baitong.dao.AddressDao">
+
+    <select id="radar" resultType="com.ntschy.baitong.entity.DO.AddressRecord">
+        select DZYS_DZXXC, DZYS_WZDZXX, DZYSLX, X, Y
+        from ADDRESSTAB
+        where X >= #{minX} and X &lt;= #{maxX} and Y >= #{minY} and Y &lt;= #{maxY}
+    </select>
+</mapper>
