@@ -28,7 +28,7 @@ public class QPointServiceImpl implements QPointService {
         // 更新数据库表
         qPointDao.updateImagePath(qid, fileDec.getFileName());
 
-        return new Result(true, "上传图片成功！");
+        return new Result<>(fileDec);
     }
 
 }
