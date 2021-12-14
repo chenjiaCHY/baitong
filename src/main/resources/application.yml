@@ -7,7 +7,7 @@ mybatis:
 spring:
   data:
     solr:
-      host: http://192.168.3.217:8983/solr/dmdz
+      host: http://2.82.23.53:8983/solr/dmdz
   mvc:
     static-path-pattern: /img/**
   resources:
