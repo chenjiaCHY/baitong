@@ -26,7 +26,7 @@ spring:
       type: com.zaxxer.hikari.HikariDataSource
     cluster:
       - key: slave1
-        url: jdbc:oracle:thin:@192.168.3.217:1521:ORCL
+        url: jdbc:oracle:thin:@2.82.23.51:1521:ORCL
         username: DMDZ
         password: DMdz888888
         driver-class-name: oracle.jdbc.OracleDriver
